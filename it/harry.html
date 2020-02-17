@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+    function getQuantity()
+{
+    //Assume form with id="theform"
+    var theForm_ = document.forms["theform"];
+    //Get a reference to the TextBox
+    var quantity = theForm.elements["quantity"];
+    var howmany = 0;
+    //If the textbox is not blank
+    if(quantity.value!="")
+    {
+        howmany = parseInt(quantity.value);
+    }
+return howmany
+
+  function price()
+{
+    var price=0;
+    //Get a reference to the form id="cakeform"
+    var theForm_ = document.forms["theform"];
+    //Get a reference to the checkbox id="includecandles"
+    var includePrices = theForm.elements["price"];
+ 
+    //If they checked the box set candlePrice to 5
+    if(price.checked==true)
+    {
+        price=50;
+    }
+    //finally we return the candlePrice
+    return price;
+}
+
+    function getTotal()
+{
+    //Here we get the total price by calling our function
+    //Each function returns a number so by calling them we add the values they return together
+    var total = price() * getQuantity();
+ 
+    //display the result
+    document.getElementById('total').innerHTML "total" + total;
+ 
+}
+  </script>
+  
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+            function getInputValue(){
+            // Selecting the input element and get its value 
+            var inputVal = document.getElementById("pname").value;
+            // Displaying the value
+            alert(inputVal);
+		
+
+
+<script>
+function myFunction()
+{
+var x;
+
+var person=prompt("please enter your name","Harry Potter");
+
+if(person!=null)
+  {
+    x="Hello" + person + " 1 how are you today?";
+	
+	document.getElementById("demo").innerHTML=x;
+	}
+}
+</script>
+  </script> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.position{
+	margin: auto;
+	width: 70%;
+	border: none;
+	padding: 10px;
+}
+.t_position{
+	margin: auto;
+	width: 70%;
+	border: none;
+	padding: 10px;
+}
+table {
+
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+
+</style>
+  </head>
+  <body>
+  <div>
+<div class="position" id="theForm">
+  <form method="POST">
+    <input type="text" onload = "" id="pname" name="pname" placeholder="Product name" size="94" required><br><br>
+    <input type="text" id="quantity" name="quantity" placeholder="Quantity" min="0" max="100" size="94" required><br><br>
+  <input type="text" id="price" name="price" placeholder="Price" size="94" required><br><br>
+  <input type="text" id="total" name="total" placeholder="Total" size="94" required><br><br>
+    <input type="submit" class="btn btn-primary" value="Insert">
+    <input type="submit" class="btn btn-warning" value="Delete All"><br><br>
+  </form>
+  <div class="form-group has-search">    <input type="text" placeholder="Search.." name="search" size = 80>
+  <button type="submit"><i class="fa fa-search"></i></button> 
+    <span class="fa fa-search form-control-feedback"></span>
+<input type="text" class="form-control" placeholder="Search">
+  </div>
+
+</div>
+<div class="t_position">
+<table>
+  <tr>
+    <th>Product Name</th>
+    <th>Quantity</th>
+    <th></th>
+  </tr>
+	<tr>
+    <td>Specs</td>
+    <td>20</td>
+    <td><i class="fa fa-trash-o" style="color:red;"></i>&nbsp;&nbsp;<i class="fa fa-edit" ></i></td>
+  </tr>
+  <tr>
+    <td>Pad</td>
+    <td>20</td>
+    <td><i class="fa fa-trash-o" style="color:red;"></i>&nbsp;&nbsp;<i class="fa fa-edit" ></i></td>
+  </tr>
+  <tr>
+    <td>Apple</td>
+    <td>20</td>
+    <td><i class="fa fa-trash-o" style="color:red;"></i>&nbsp;&nbsp;<i class="fa fa-edit" ></i></td>
+  </tr>
+  <tr>
+    <td>Mouse</td>
+    <td>15</td>
+    <td><i class="fa fa-trash-o" style="color:red;"></i>&nbsp;&nbsp;<i class="fa fa-edit" ></i></td>
+  </tr>
+  <tr>
+    <td>Table</td>
+    <td>13</td>
+    <td><i class="fa fa-trash-o" style="color:red;"></i>&nbsp;&nbsp;<i class="fa fa-edit" ></i>	</td>
+  </tr>
+  </tr>
+</div>
+</div>
+
+
+</script>
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+</body>
+</html> 

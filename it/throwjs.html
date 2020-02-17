@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>show items</title>
+</head>
+<body>
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()"> Test Input</button>
+< p id="p1"></p>
+<p id="demo2" ></p>
+<script>
+function myFunction() {
+  var message,x;
+  var atmpt=();
+  message=document.getElementById("p1");
+  message.innerHTML = "";
+  X = document.getElementById("demo").value;
+  try{
+  if( x== "") throw "empty";
+  if (isNaN(x)) throw " not a number";
+  if (x<5) throw "too low";
+  if(x>10) throw "too high";
+  }
+  
+  catch(error){
+  message.innerHTML = "input is" = error;
+  }
+  finally
+  {
+  document.getElementById("demo2").innerHTML="Attempted::";
+  }
+  }
+  </script>
+  <body>
+  <html>
+  
