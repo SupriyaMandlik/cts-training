@@ -1,0 +1,62 @@
+package Exam;
+
+import java.util.ArrayList;
+public class Course {
+	static ArrayList<Student> students = null;
+	static {
+		students = new ArrayList<>();
+		Student std1 = new Student(01, "vijay", 74.0);
+		Student std2 = new Student(02, "ajay", 43.0);
+		Student std3 = new Student(03, "karan", 23.5);
+		students.add(std1);
+		students.add(std2);
+		students.add(std3);
+	}
+	public static void main(String[] args) {
+	}
+	public String grades(Student student) {
+			if (student.getMarks() >= 80) {
+				return "Distinction";
+			}else if(student.getMarks() >= 60 && student.getMarks() <=79 ) {
+				return "First Class";
+			}else if(student.getMarks() >= 50 && student.getMarks() < 60) {
+				return "Second Class";
+			}else {
+				return "Fail";
+			}
+	}
+}
+class Student{
+	int id;
+	String name;
+	double marks;
+	public Student(int id, String name, double marks) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.marks = marks;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getMarks() {
+		return marks;
+	}
+	public void setMarks(double marks) {
+		this.marks = marks;
+	}
+	@Override
+	public String toString() {
+		return id + " : " + name + " : " + marks;
+}
+}
+

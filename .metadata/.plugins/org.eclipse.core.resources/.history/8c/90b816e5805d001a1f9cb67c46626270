@@ -1,0 +1,25 @@
+package Exam;
+
+import java.util.ArrayList;
+
+public class MaxResult {
+	public static void main(String[] args) {
+		ArrayList<ArrayListStudent> students =  new ArrayList<>();
+		 MaxResult std1 = new MaxResult("Ram", 70.0,80.2,64.54);
+		 MaxResult std2 = new  MaxResult("Shyam", 54.0,65.3,85.4);
+		 MaxResult std3 = new MaxResult("Ramesh", 90.5,63,41);
+		 MaxResult std4 = new  MaxResult("Suresh", 61.7,80.0,78.3);
+		students.add(std1);
+		students.add(std2);
+		students.add(std3);
+		students.add(std4);
+		System.out.println("Ram"+ grades(std1) + ".");
+		System.out.println("Shyam"+ grades(std2) + ".");
+		System.out.println("Ramesh"+ grades(std3) + ".");
+		System.out.println("Suresh"+ grades(std4) + ".");
+		public static String grades( MaxResult student) {
+			if (student.getMarks() >= 80) {
+			
+	}
+}
+}

@@ -1,0 +1,14 @@
+package jdbcapi;
+
+public class Test {
+		public static void main(String args[]){
+		if(System.out.append("I like ")==null){
+		System.out.println("I like ");
+		}
+		else{
+		System.out.println("Java");
+		}
+		}
+		
+	}
+

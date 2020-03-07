@@ -9,7 +9,7 @@ public interface EmployeeDAO {
 	
 	public boolean deleteEmployee(Employee employee);
 	
-	public Employee getEmployeeById(int id);
+	public  Employee getEmployeeById(int id);
 	
 	public List<Employee> getAllEmployees();
 	

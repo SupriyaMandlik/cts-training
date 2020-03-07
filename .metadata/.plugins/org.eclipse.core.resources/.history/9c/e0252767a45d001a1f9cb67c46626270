@@ -1,0 +1,28 @@
+package Exam;
+
+public class consecutive {
+	static void printArr(int[] arr, int n) {
+		for (int i = 0; i < n; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		int diff[];
+		diff = new int[n];
+		for (int i = 0; i < n - 1; i++) {
+			if (arr[i] >= arr[i + 1])
+				diff[i] = (arr[i] - arr[i + 1]);
+			else
+				diff[i] = arr[i + 1] - arr[i];
+		}
+		System.out.print("\n  new modified number is\n");
+		for (int i = 0; i < n; i++) {
+			System.out.print(diff[i] + " ");
+		}
+	}
+
+	public static void main(String[] args) {
+		int[] arr = { 6, 4, 2, 1, 6 };
+		int n = arr.length;
+		printArr(arr, n);
+	}
+
+}

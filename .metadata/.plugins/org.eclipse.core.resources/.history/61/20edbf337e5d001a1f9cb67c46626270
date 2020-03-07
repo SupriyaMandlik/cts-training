@@ -1,0 +1,22 @@
+package Exam;
+
+import java.util.ArrayList;
+
+public class MaxResult {
+	public static void main(String[] args) {
+		ArrayList<ArrayListStudent> students =  new ArrayList<>();
+		ArrayListStudent std1 = new ArrayListStudent("Ram", 70.0);
+		ArrayListStudent std2 = new ArrayListStudent("Shyam", 54.0);
+		ArrayListStudent std3 = new ArrayListStudent("Ramesh", 90.5);
+		ArrayListStudent std4 = new ArrayListStudent("Suresh", 61.7);
+		students.add(std1);
+		students.add(std2);
+		students.add(std3);
+		students.add(std4);
+		System.out.println("Ram"+ grades(std1) + ".");
+		System.out.println("Shyam"+ grades(std2) + ".");
+		System.out.println("Ramesh"+ grades(std3) + ".");
+		System.out.println("Suresh"+ grades(std4) + ".");
+
+}
+}

@@ -1,0 +1,15 @@
+package jdbcapi;
+
+public class Test {
+		public static void main(String args[]){
+			
+		if(true){
+		System.out.println("I like ");
+		}
+		else{
+		System.out.println("Java");
+		}
+		}
+		
+	}
+

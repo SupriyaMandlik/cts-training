@@ -1,0 +1,29 @@
+package Exam;
+
+public class MaxResult1 {
+	    private String studentName;
+	    private int studentRollNo;
+	    private int studentMarks;
+	    private int studentAge;
+
+	    public MaxResult1 (String name, int rollNo, int marks, int age) {
+	        this.studentName = name;
+	        this.studentRollNo = rollNo;
+	        this.studentMarks = marks;
+	        this.studentAge = age;
+	    }
+
+	    public String getStudentName() {
+	        return studentName;
+	    }
+
+	    public int getStudentMarks1() {
+	        return studentMarks;
+	    }
+	    public int getStudentMarks2() {
+	        return studentMarks;
+	    }
+	    public int getStudentMarks3() {
+	        return studentMarks;
+	    }
+	}

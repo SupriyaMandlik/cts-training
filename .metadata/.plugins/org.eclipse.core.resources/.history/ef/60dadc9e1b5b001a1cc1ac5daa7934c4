@@ -1,0 +1,5 @@
+package com.cts.training.bean;
+
+public class EmployeeStream {
+  public static void main(String[] args)
+}

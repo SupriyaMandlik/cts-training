@@ -1,0 +1,13 @@
+package jdbcapi;
+
+public class Validation {
+	public static void main(String...args) {
+		String password=null;
+		if(password.isEmpty()) {
+			System.out.println("password should not be empty ");
+		}else {
+			System.out.println("go ahead...");
+		}
+	}
+
+}

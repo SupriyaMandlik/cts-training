@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+</head>
+<body>
+ <form action="servlet" method="get">    
+id:<input type="text" name="employeeId"/><br/><br/>  
+name:<input type="text" name="employeeName"/><br/><br/>  
+address:<input type="text" name="employeeAddress"/><br/><br/>  
+designation:<input type="text" name="employeeDesignation"><br></br> 
+<input type="submit" value="Register"/>  
+  
+</form>  
+   
+</body>
+</html>

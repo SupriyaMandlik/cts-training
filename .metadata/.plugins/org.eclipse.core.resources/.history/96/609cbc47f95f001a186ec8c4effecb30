@@ -1,0 +1,23 @@
+package com.cts;
+
+
+	import java.net.http.HttpRequest;
+	import java.net.http.HttpResponse;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+	import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+
+	@WebServlet("/TargetServlet")
+	public class TargetServlet extends HttpServlet{
+			 @Override
+			 private void doGet(HttpServletRequest request,HttpServletResponse response)throws ServletException  {
+				System.out.println("from doGetof sourceservlet");
+
+			}
+			
+		
+	}
+
+}

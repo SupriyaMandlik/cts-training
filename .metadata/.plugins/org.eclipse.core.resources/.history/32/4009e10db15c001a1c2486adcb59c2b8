@@ -1,0 +1,13 @@
+package jdbcapi;
+
+public class Test {
+		public static void main(String args[]){
+		if(num%2==0){
+		System.out.println("Java");
+		}else{
+		System.out.println("I like");
+		}
+		}
+		
+	}
+}

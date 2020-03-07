@@ -1,0 +1,38 @@
+package Exam;
+
+public class MaxResult1 {
+	String name;
+	private double marks1;
+	private double marks2;
+	private double marks3;
+	
+	public MaxResult1 ( String name, double marks1,double marks2,double marks3) {
+		super();
+		this.name = name;
+		this.marks1 = marks1;
+		this.marks2 = marks2;
+		this.marks3 = marks3;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getMarks() {
+		return marks;
+	}
+	public void setMarks(double marks) {
+		this.marks = marks;
+	}
+	@Override
+	public String toString() {
+		return id + " : " + name + " : " + marks;
+}
+}

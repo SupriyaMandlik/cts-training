@@ -1,0 +1,65 @@
+package jdbcapi;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Validation {
+	public static void main(String...args) {
+		/*String password=null;
+		if(password.isEmpty()) {
+			System.out.println("password should not be empty ");
+		}else {
+			System.out.println("go ahead...");
+		}
+	}
+
+}*/
+  //this code will throw NullPointerException   
+	
+	/*Set set = new HashSet();;;;;;;;;;;;;;
+	System.out.println("end of main");;;;;;;;;;; */
+		Set set = new TreeSet();
+		//Set set = new HashSet();
+		
+		/*set.add("one");
+		set.add("four");
+		set.add("three");
+		set.add("two");
+		System.out.println(set);
+		
+		System.out.println("end of main");*/
+		
+		Map<Integer,String> map=new HashMap<>();
+		map.put(234567, "rahul1$$");
+		map.put(879999, "kartik2$");
+		map.put(456464, "bumrah3$$");
+	System.out.println(map);
+	
+     /*  for (String name : map.values())  
+         System.out.println("value: " + name ); */
+   
+       
+       /*Iterator<Entry<Integer, String>> itr = map.entrySet().iterator(); 
+       
+       while(itr.hasNext()) 
+       { 
+            Entry<Integer, String> entry = itr.next(); 
+            System.out.println("Key = " + entry.getKey() +  
+                                ", Value = " + entry.getValue()); 
+       } */
+	
+	Set set=map.entrySet();
+	Iterator iterator=set.iterator();
+	while(iterator.hasNext()) {
+		System.out.println(iterator.next());
+	}
+	
+	
+	
+   } 
+	}

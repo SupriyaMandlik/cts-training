@@ -1,0 +1,17 @@
+package com.servlet;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+
+public class ConnectionServlet extends HttpServlet {
+	   String user,password,url,driver;
+@Override
+public void init (ServletConfig config) throws ServletException {
+   user=config.getInitParameter("userName");
+   password=config.getInitParameter("v");
+   url=config.getInitParameter("url");
+   driver=config.getInitParameter("driver");
+   
+}
+}

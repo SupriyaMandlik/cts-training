@@ -1,0 +1,25 @@
+package jdbcapi;
+
+public class FirstName {
+	public static void  main(String...args) {
+		String lastname = "";
+		  String firstname = "";
+	String name = null;
+	for(int i = 0; i < name.length(); i++)
+		
+		    {
+		     if(name.charAt(i) == ' ')
+		        {
+		            lastname = name.substring(i + 1);
+		
+		            firstname = name.substring(0, i);   
+		
+		        }
+		
+		    }
+		
+		   System.out.println( lastname + ", " + firstname);
+		
+	}
+}
+

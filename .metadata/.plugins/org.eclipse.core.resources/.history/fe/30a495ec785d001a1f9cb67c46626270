@@ -1,0 +1,49 @@
+package Exam;
+
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Course {
+
+	 public static void main(String args[]) throws Exception {
+	      ArrayList list = new ArrayList();
+	      list.add("ram");
+	      list.add("George");
+	      list.add("shyam");
+	      list.add("Susan");
+	      list.add("ramesh");
+	      System.out.println(list);
+	      int marks[] = new int[6];
+	        int i;
+	        float total=0, avg;
+	  
+	 for( i=0; i<6; i++) { 
+         System.out.print("Enter Marks of Subject"+(i+1)+":");
+         Scanner sc= new Scanner(System.in);
+         marks[i] = sc.nextInt();
+         total = total + marks[i];
+      }
+ 
+      //Calculating average here
+      avg = total/6;
+      System.out.print("The student Grade is: ");
+      if(avg>=80)
+      {
+          System.out.print("A");
+      }
+      else if(avg>=60 && avg<80)
+      {
+         System.out.print("B");
+      } 
+      else if(avg>=40 && avg<60)
+      {
+          System.out.print("C");
+      }
+      else
+      {
+          System.out.print("D");
+      }
+  }
+}
+

@@ -1,0 +1,33 @@
+package Exam;                                                                              
+                                                                                                 
+public class MaxResult1 {                                                                        
+	    private String studentName;                                                              
+	    private int studentMarks1;                                                               
+	    private int studentMarks2;                                                                
+	    private int studentMarks3;                                                                  
+                                                                                                 
+	    public MaxResult1 (String name, int rollNo, int marks, int age) {                        
+	        this.studentName = studentName;                                                             
+	        this.studentMarks1= studentMarks1;                                                         
+	        this.studentMarks2 = studentMarks2;                                                           
+	        this.studentMarks3 = studentMarks3;                                                               
+	    }                                                                                        
+                                                                                                 
+	    public String getStudentName() {                                                         
+	        return studentName;                                                                  
+	    }                                                                                        
+                                                                                                 
+	    public int getStudentMarks1() {                                                          
+	        return studentMarks1;                                                                 
+	    }                                                                                        
+	    public int getStudentMarks2() {                                                          
+	        return studentMarks2;                                                                 
+	    }                                                                                        
+	    public int getStudentMarks3() {                                                          
+	        return studentMarks3;                                                                 
+	    }                        
+	      @Override
+	    public String toString() {
+ 			return studentName + " : " + studentMarks1+ ":" +studentMarks2+ ":" +studentMarks3;
+        	} 
+}

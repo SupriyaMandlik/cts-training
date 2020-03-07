@@ -1,0 +1,63 @@
+package Exam;
+
+import java.util.ArrayList;
+
+import java.util.ArrayList;
+
+public class MaxResult {
+
+    private static void println(String message) {
+        System.out.println(message);
+    }
+    public static void main(String[] args) throws java.lang.Exception {
+
+        //1
+        ArrayList< MaxResult1 > studentList = new ArrayList<>();
+
+        MaxResult1  std1 = new MaxResult1 ("john", 2, 56, 12);
+        MaxResult1  std2 = new MaxResult1 ("suresh", 70, 47, 12);
+        MaxResult1  std3 = new MaxResult1 ("Praveen", 70, 68, 82);
+        MaxResult1  std4 = new MaxResult1 ("suresh", 69, 97, 59);
+        MaxResult1  std5 = new MaxResult1 ("ramesh", 14, 56,44);
+
+        studentList.add(std1);
+        studentList.add( std2);
+        studentList.add(std3);
+        studentList.add(std4);
+        studentList.add(std5);
+
+        MaxResult1 topStudent = null;
+        int maxMark = 0;
+
+       
+        for (int i = 0; i < studentList.size(); i++)
+        { 
+        	if (studentList.get(i).getStudentMarks1() > maxMark) {
+               
+                topStudent = studentList.get(i);
+                maxMark = studentList.get(i).getStudentMarks1();
+            }
+        }
+        for (int i = 0; i < studentList.size(); i++)
+        { 
+        	if (studentList.get(i).getStudentMarks3() > maxMark) {
+               
+                topStudent = studentList.get(i);
+                maxMark = studentList.get(i).getStudentMarks3();
+            }
+        }
+        
+        
+        
+        if (topStudent != null) {
+            println("Top Student Details : ");
+            println("Name : " + topStudent.getStudentName());
+            println("Marks : " + topStudent.getStudentMarks1());
+            println("Marks : " + topStudent.getStudentMarks2());
+            println("Marks : " + topStudent.getStudentMarks3());
+            
+        }
+
+    }
+
+}

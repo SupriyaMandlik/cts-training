@@ -1,5 +1,4 @@
 package com.cts.training.bean;
-
 public class Employee {
 
 	int id;

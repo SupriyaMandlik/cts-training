@@ -1,0 +1,195 @@
+package com.cts.training.date;
+
+import java.time.Clock;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.Month;
+import java.time.MonthDay;
+import java.time.OffsetDateTime;
+import java.time.Period;
+import java.time.YearMonth;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
+import java.time.temporal.ChronoUnit;
+import java.util.Date;
+
+public class DateAndTime {
+	public static void main(String[] args) {
+		//1. How to get today's date in Java 8
+		
+		Date date=new Date();   //base time
+		System.out.println(date);
+		int day=date.getDay();
+		switch(day) 
+		{
+		case 0: System.out.println("Sunday");
+		break;
+		case 1: System.out.println("Monday");
+		break;
+		case 2: System.out.println("tuesday");
+		break;
+		case 3: System.out.println("Wednesday");
+		break;
+		case 4: System.out.println("Thursday");
+		break;
+		case 5: System.out.println("Friday");
+		break;
+		case 6: System.out.println("Saturday");
+		break;
+		default:
+			 System.out.println("Wrong choice");	
+		}
+	
+		//2.How to get current day, month and year in Java 8
+		
+	LocalDate date1=LocalDate.now();
+	int day1=date1.getDayOfMonth();
+	int month=date1.getMonthValue();
+	int year=date1.getYear();
+	System.out.println("current day, month and year"); 
+	System.out.println(date1);
+	
+	//3.How to get a particular date in Java 8
+	
+	LocalDate birthday=LocalDate.of(1998, 01, 19);
+	
+	System.out.println("Your birthday is :"+birthday);
+
+	 //4.How to check if two dates are equal in Java 8
+	
+	LocalDate today=LocalDate.now();
+	LocalDate birthday1=LocalDate.of(1998, 01, 19);
+	
+	if(birthday1.equals(today))
+	{
+		System.out.printf("Today %s and birthday %s are same dates %n",today,birthday);
+	}
+	else
+	{
+		System.out.println("Dates are not Equal");
+	}
+
+	
+	//5. How to check for recurring events e.g. birthday in Java 8
+	
+	LocalDate today1=LocalDate.now();
+	LocalDate birthday2=LocalDate.of(1985, 8, 18);
+	MonthDay birth=MonthDay.of(birthday2.getMonthValue(), birthday2.getDayOfMonth());
+	MonthDay current=MonthDay.from(today1);
+	if(birth.equals(current))
+	{
+		System.out.printf("Today %s and birthday %s are same dates %n",today1,birthday2);
+	}
+	else
+	{
+		System.out.println("Dates are not Equal");
+	}
+
+   //6. How to get current Time in Java 8
+	
+
+	LocalTime current1=LocalTime.now();
+	System.out.println("Current time is :"+current1);
+	
+	
+	//7.How to add hours in time
+	
+	LocalTime current2=LocalTime.now();
+	LocalTime newTime=current2.plusHours(8);
+	System.out.println("New  time is :"+newTime);
+	 
+	//8.  How to find Date after 1 week
+	
+	LocalDate today2=LocalDate.now();
+	
+	LocalDate next=today2.plus(1, ChronoUnit.WEEKS);
+	System.out.println("Today's date is :"+today2);
+	System.out.println("1 week Later date is :"+next);
+	
+	//9. Date before and after 1 year
+	
+	LocalDate today3=LocalDate.now();
+	LocalDate previous=today3.minus(1, ChronoUnit.YEARS);
+	LocalDate next1=today3.plus(1, ChronoUnit.YEARS);
+	System.out.println("previous Years' date is :"+previous);
+	System.out.println("Today's date is :"+today3);
+	System.out.println("1 Year Later date is :"+next1);
+	
+	
+	//10.  Using Clock in Java 8
+	
+	Clock clock=Clock.systemUTC();
+	System.out.println("Clock :"+clock);//Clock :SystemClock[Z]
+	
+	Clock defaultClock=Clock.systemDefaultZone();
+	System.out.println("Clock :"+defaultClock);//Clock :SystemClock[Asia/Calcutta]
+	
+	//11.  How to see if a date is before or after another date in Java
+	
+	LocalDate today4=LocalDate.now();
+	
+	LocalDate tommorow=LocalDate.of(2016, 8, 20);
+	if(today4.isBefore(tommorow))
+	{
+		System.out.println("TRUE");
+	}else {
+		System.out.println("FALSE");
+	}
+	
+	//12. Dealing with time zones in Java 8
+     
+	
+	ZoneId zoneId=ZoneId.of("Asia/Calcutta");
+	LocalDateTime localDateTime=LocalDateTime.now();
+	ZonedDateTime zonedDateTime=ZonedDateTime.of(localDateTime, zoneId);
+	System.out.println("Date and Time in delhi :"+zonedDateTime);
+	
+	//13.  How to represent fixed date e.g. credit card expiry, YearMonth
+	
+	YearMonth today5=YearMonth.now();
+	
+	System.out.printf("The current %s : %d \t %n",today5,today5.getMonthValue());
+	
+	YearMonth creditExpiry=YearMonth.of(2020, Month.OCTOBER);
+	System.out.println("Your Credit Card Expiry is :"+creditExpiry);
+	
+	//14. How to check Leap Year in Java 8
+	
+	LocalDate today6=LocalDate.now();
+	
+	if(today.isLeapYear())
+	{
+		System.out.printf("The Year %s is a Leap Year %n",today6);
+	}
+	else
+	{
+		System.out.printf("The Year %s is not a Leap year %n",today6);
+	}
+
+	//15.  How many days, month between two dates
+	
+	LocalDate myMarriage=LocalDate.of(2016, Month.FEBRUARY, 03);
+	LocalDate today7=LocalDate.now();
+	Period months=Period.between(myMarriage, today7);
+	System.out.println("Months between My Marriage and today :"+months.getMonths());
+
+	//16. Date and Time with timezone offset
+	
+	LocalDateTime localDateTime1=LocalDateTime.of(2016, Month.JANUARY, 10, 11, 30);
+	
+	ZoneOffset zoneOffset=ZoneOffset.of("+05:30");
+	OffsetDateTime offsetDateTime=OffsetDateTime.of(localDateTime1, zoneOffset);
+	System.out.println("Local DateTime Zone :"+offsetDateTime);
+	
+	//17. How to get current timestamp in Java 8
+	 
+	Instant instant=Instant.now();
+	System.out.println("The Current timestamp is :"+instant);
+
+	
+	}
+	}
+

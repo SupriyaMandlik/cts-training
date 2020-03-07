@@ -1,0 +1,33 @@
+package jdbcapi;
+
+import java.util.HashSet;
+
+import java.util.Set;
+
+public class Validation {
+	public static void main(String...args) {
+		/*String password=null;
+		if(password.isEmpty()) {
+			System.out.println("password should not be empty ");
+		}else {
+			System.out.println("go ahead...");
+		}
+	}
+
+}*/
+  //this code will throw NullPointerException   
+	
+	/*Set set = new HashSet();;;;;;;;;;;;;;
+	System.out.println("end of main");;;;;;;;;;; */
+	
+		Set set = new HashSet();
+		set.add("one");
+		set.add("two");
+		set.add("three");
+		set.add("four");
+		System.out.println(set);
+		
+		System.out.println("end of main");
+		
+	}
+}

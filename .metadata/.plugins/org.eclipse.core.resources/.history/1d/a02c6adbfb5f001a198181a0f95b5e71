@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<fieldset>
+<legend>LIC Policy</legend>
+<form action="SourceServlet">
+<input type ="text" name="customerName" placeholder="Enter your name"/>
+<input type="text" name="term" placeholder="Enetr term in years"/>
+<input type="text" name="premium" placeholder="Enter premium account"/>
+<input type="submit" value="Submit"/>
+</form>
+</fieldset>
+
+</body>
+</html>

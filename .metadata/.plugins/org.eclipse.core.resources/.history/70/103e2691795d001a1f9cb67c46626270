@@ -1,0 +1,53 @@
+package Exam;
+
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Course {
+
+	 public static void main(String args[]) throws Exception {
+	      ArrayList list = new ArrayList();
+	      list.add("ram");
+	      list.add("George");
+	      list.add("shyam");
+	      list.add("Susan");
+	      list.add("ramesh");
+	      System.out.println(list);
+	      int marks[] = new int[6];
+	        int i;
+	        float total=0, avg;
+	  
+	 for( i=0; i<6; i++) { 
+         System.out.print("Enter Marks of  ram in Subject"+(i+1)+":\n");
+         System.out.print("Enter Marks of  george in Subject"+(i+1)+":\n");
+         System.out.print("Enter Marks of  shyam in Subject"+(i+1)+":\n");
+         System.out.print("Enter Marks of  susan in Subject"+(i+1)+":\n");
+         System.out.print("Enter Marks of  ramesh in Subject"+(i+1)+":\n");
+         Scanner sc= new Scanner(System.in);
+         marks[i] = sc.nextInt();
+         total = total + marks[i];
+      }
+ 
+      //Calculating average here
+      avg = total/6;
+      System.out.print("The student Grade is: ");
+      if(avg>=80)
+      {
+          System.out.print("distinction");
+      }
+      else if(avg>=60 && avg<=79)
+      {
+         System.out.print("First class");
+      } 
+      else if(avg<=50)
+      {
+          System.out.print("Second class");
+      }
+      else
+      {
+          System.out.print("fail");
+      }
+  }
+}
+

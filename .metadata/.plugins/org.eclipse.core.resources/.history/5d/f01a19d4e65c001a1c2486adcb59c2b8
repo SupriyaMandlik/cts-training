@@ -1,0 +1,35 @@
+package jdbcapi;
+
+import java.util.HashSet;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Validation {
+	public static void main(String...args) {
+		/*String password=null;
+		if(password.isEmpty()) {
+			System.out.println("password should not be empty ");
+		}else {
+			System.out.println("go ahead...");
+		}
+	}
+
+}*/
+  //this code will throw NullPointerException   
+	
+	/*Set set = new HashSet();;;;;;;;;;;;;;
+	System.out.println("end of main");;;;;;;;;;; */
+		Set set = new TreeSet();
+		//Set set = new HashSet();
+		set.add("one");
+		set.add("four");
+		set.add("three");
+		set.add("two");
+		set.add(2);
+		System.out.println(set);
+		
+		System.out.println("end of main");
+		
+	}
+}

@@ -1,0 +1,35 @@
+package Exam;
+
+import java.util.ArrayList;
+public class ArrayListGrades {
+
+		public static void main(String[] args) {
+			ArrayList<Student> students =  new ArrayList<>();
+
+			Student std1 = new Student(01, "Ram", 70.0);
+			Student std2 = new Student(02, "Shyam", 54.0);
+			Student std3 = new Student(03, "Ramesh", 90.5);
+			Student std4 = new Student(04, "Suresh", 61.7);
+			students.add(std1);
+			students.add(std2);
+			students.add(std3);
+			students.add(std4);
+			System.out.println("Ram"+ grades(std1) + ".");
+			System.out.println("Shyam"+ grades(std2) + ".");
+			System.out.println("Ramesh"+ grades(std3) + ".");
+			System.out.println("Suresh"+ grades(std4) + ".");
+		}
+
+
+		public static String grades(Student student) {
+				if (student.getMarks() >= 80) {
+					return "Distinction";
+				}else if(student.getMarks() >= 60 && student.getMarks() <=79 ) {
+					return "First Class";
+				}else if(student.getMarks() >= 50 && student.getMarks() < 60) {
+					return "Second Class";
+				}else {
+					return "Fail";
+				}
+		}
+	}

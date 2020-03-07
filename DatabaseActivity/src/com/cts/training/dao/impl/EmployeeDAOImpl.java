@@ -13,7 +13,7 @@ public class EmployeeDAOImpl  implements EmployeeDAO{
 	
 	Connection conn=getConnection();
 	PreparedStatement ps=null;
-	private String sql;
+
 	
 	@Override
 	public boolean saveEmployee(Employee employee) {
@@ -40,10 +40,12 @@ public class EmployeeDAOImpl  implements EmployeeDAO{
 	public boolean updateEmployee(Employee employee) {
 		String query="update employee set name=? where id=?";
 		try { 
-			ps=conn.prepareStatement(sql);
-			 ResultSet rs=ps.executeQuery();
-			 ps.setString(1, employee.getName());
-			 ps.setInt(2, employee.getId());
+			ps=conn.prepareStatement(query);
+			
+			ps.setString(1, employee.getName());
+			ps.setInt(2, employee.getId());
+			ps.executeUpdate();
+			return true;
 		}catch(SQLException e)
 		{
 			e.printStackTrace();
@@ -52,13 +54,22 @@ public class EmployeeDAOImpl  implements EmployeeDAO{
 		return false;
 	}
 		
-	
+
 	@Override
 	public boolean deleteEmployee(Employee employee) {
-		// TODO Auto-generated method stub
-		return false;
+		String sql = "delete from employee where id =?";
+		try {
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, employee.getId());
+			ps.executeUpdate();
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}return false;
 	}
-	
+
+		
 	@Override
 	public Employee getEmployeeById(int id) {
 		String sql="select * from employee where id=?";

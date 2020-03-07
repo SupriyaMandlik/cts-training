@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+  <servlet>
+    <servlet-name>jaqu</servlet-name>
+    <servlet-class>com.servlet.SourceServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+   <servlet-name>jaqu</servlet-name>
+   <url-pattern>/ss</url-pattern>
+</servlet-mapping>
+
+</web-app>

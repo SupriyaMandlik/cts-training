@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+  <context-param>
+       <param-name>userName</param-name>
+      <param-value>root</param-value>
+    </context-param>
+    
+    <context-param>
+       <param-name>password</param-name>
+      <param-value>ROOT</param-value>
+    </context-param>
+    
+    <context-param>
+       <param-name>url</param-name>
+      <param-value>jdbc:mysql://localhost:3306/ctspune</param-value>
+    </context-param>
+    
+    <context-param>
+       <param-name>driver</param-name>
+      <param-value>com.mysql.jdbc.Driver</param-value>
+    </context-param> 
+    
+    ******ConnectionServlet start*****
+<servlet>
+    <servlet-name>cs</servlet-name>
+    <servlet-class>com.servlet.ConnectionServlet</servlet-class>   
+</servlet>
+
+<servlet-mapping>
+   <servlet-name>cs</servlet-name>
+   <url-pattern>/cs</url-pattern>
+</servlet-mapping>
+ ******ConnectionServlet end*****
+
+            *******FormSubmit*********
+	<servlet>
+		<servlet-name>register</servlet-name>
+		<servlet-class>employeedatabase.FormSubmit</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>register</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+
+</web-app>
+
+
