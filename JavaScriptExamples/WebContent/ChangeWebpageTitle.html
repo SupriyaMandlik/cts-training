@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>My title</title>
+</head>
+<body>
+
+<h1>an example of innerhtml</h1>
+<button onclick="changeContent()">change title</button>
+
+<p id="demo"></p>
+<script>
+function changeContent() 
+{
+document.getElementById("demo").innerHTML = "this content is applied dynamically";
+document.title="My title";
+document.querySelector('title').textContent="Page title changed";
+		
+}
+function test1(){
+	var marks=98;
+	console.log("Hello from test1");
+	return marks;    <!--return marks-->
+}
+function test2(){
+	var obtainedMarks=test1();     <!--catch marks-->
+	console.log("Hello from test2");
+ console.log(obtainedMarks);
+}
+test2();           <!--catch marks-->
+
+</script>
+
+</body>
+</html>
